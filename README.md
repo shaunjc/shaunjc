@@ -17,19 +17,19 @@ page that displays a field for each key/value. These settings can then be read u
 - It comes with full support for customising the settings page, as well as hooking into the activation and
 deactivation of itself, loading templates, and managing transients.
 
-The following snippet is an example of how the class may behave.
+The following snippet is an example of how the class can be created.
 
       // Example class
       class Test extends BaseFramework {
         /**
-         * This will create a settings page with a field labeled "Setting Name".
+         * This will create a settings page, found by going to Settings > Test, with a field labeled "Setting Name".
          */
         protected $_settings = array(
           'setting_name' => DEFAULT_VALUE, // This variable type will be enforced.
         );
         
         /**
-         * All three of the following methods will create the same action.
+         * All three of the following methods will hook into the same action with the same priority.
          * @action init
          * @priority 10
          * @arguments 1
